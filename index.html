@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css/index.css" />
+    <title>Portafolio</title>
+  </head>
+  <body>
+    <div class="progress">
+      <span class="progress__value">&#x1F815;</span>
+    </div>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__logo">
+          <img class="nav__img" src="images/img/alexWebSmall.png" alt="Alex web" />
+        </div>
+
+        <div class="bars__menu">
+          <span class="line1__bars--menu"></span>
+          <span class="line2__bars--menu"></span>
+          <span class="line3__bars--menu"></span>
+        </div>
+
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a class="nav__link" href="#home">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#about-me">About me</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#skills">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#contact">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="home" id="home">
+        <div class="home__info">
+          <h2>Hi<span class="home__info--animation">! </span>I am</h2>
+          <h1 class="home__info--animation">Alexander</h1>
+          <h1 class="home__info--animation">Gómez</h1>
+          <h3>Frontend Developer</h3>
+        </div>
+        <div class="home__btn">
+          <a
+            class="home__btn-social-media effect"
+            href="https://www.linkedin.com/in/alexander-g%C3%B3mez-osorio-3860a0228/"
+            >Linkedin<span>in</span></a
+          >
+          <a
+            class="home__btn-social-media effect"
+            href="https://github.com/alexandergomezosorio"
+            >GitHub <img src="images/img/githubBlue (4).svg" alt="git hub"
+          /></a>
+        </div>
+      </section>
+
+      <section class="about-me" id="about-me">
+        <h2 class="title">About me</h2>
+        <h5>Alexander Gómez</h5>
+
+        <div class="about-me__img-text-cv">
+          <img class="about-me__img" src="images/img/AlexanderGomez.png" alt="Alexander Gomez">
+
+           <div class="about-me__text-cv">
+                <p>
+                  I am a <span>software development technician</span>, graduated from the university
+                  Cesde, I chose this technique because my life has always beendirected by
+                  the world of technology and it was important study something that I was
+                  passionate about, an additional plus that I know will I can provide to those
+                  who purchase my services is that I am a person who loves challenges, I am very
+                  curious and I go more beyond what they ask of me, it has never been an obstacle 
+                  to work in team, on the contrary, I believe that big projects come out of the 
+                  union of great minds.
+                  <p>
+                    I am a faithful believer that never
+                     It is late to fulfill dreams, that everyone's processes are
+                     different and that in the end the important thing is improvement.
+                  </p>
+                </p>
+                <div class="about-me__cv">
+                  <a class="abaout-me__download-cv effect"download="Alexander CV"id="hhh" href="cv.pdf">Download CV</a>
+                </div>
+              </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <h2 class="title">Skills</h2>
+
+        <div class="skills__container" id="skills__container"></div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="title">Contact me</h2>
+
+        <form id="form" action="https://formsubmit.co/106d2bf5626f86106b58b8d7886f4f61" method="POST">
+              <div class="contact__form">
+
+                <div class="contact__formInputs">
+                  <label class="contact__formLabel " for="message">Name</label>
+                  <input class="contact__formInput "  id="name" name="name" type="text" required>
+                  <p id="nameError" class="contact__formMessageError"></p>
+                </div>
+                
+                
+                  <div class="contact__formInputs">
+                    <label class="contact__formLabel" for="message">Email</label>
+                    <input class="contact__formInput" id="email" name="email" type="email"required>
+                    <p id="emailError" class="contact__formMessageError"></p>
+                  </div>
+                
+                <div class="contact__formInputs">
+                  <label class="contact__formLabel" for="message">Message</label>
+                  <textarea class="contact__formInput contact__formInput--textarea" id="message" name="message"required ></textarea>
+                  <p id="messageError" class="contact__formMessageError"></p>
+                </div>
+                
+
+                <input  type="submit" value="Enviar" class="contact__formSubmit effect">
+                
+
+                <!-- directs you to a url -->
+                <input type="hidden" name="_next" value="http://127.0.0.1:5501/">
+                <!-- Remove so you don't have to validate with capcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+              </div>
+            </form>
+            
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img class="footer__logoImg" src="images/img/alexWebSmall.png" alt="alexWebLogo">
+      </div>
+         <div class="footer__socialMedia">
+
+          <a href="https://github.com/alexandergomezosorio">
+            <img class="footer__icon" src="images/icons/gitHubBlack.png" alt="gitHub">
+          </a>
+
+          <a href="https://www.linkedin.com/in/alexander-g%C3%B3mez-osorio-3860a0228/">
+            <img class="footer__icon" src="images/icons/6622812_in_linked_linkedin_social_iconBlack64px.png" alt="linkedin">
+          </a>
+
+        </div>
+        <h4>copyright @ 2023 Alexander Gómez</h4>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/2360e6d9b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

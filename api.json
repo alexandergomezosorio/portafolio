@@ -1,0 +1,50 @@
+[
+    {
+        "pic":"./images/icons/html.png",
+        "title":"Html"
+    },
+    {
+        "pic":"./images/icons/css.png",
+        "title":"Css"
+    },
+    {
+        "pic":"./images/icons/js.png",
+        "title":"JavaScript"
+    },
+    {
+        "pic":"./images/icons/react.png",
+        "title":"React"
+    },
+    {
+        "pic":"./images/icons/boostrap.png",
+        "title":"Bootstrap"
+    },
+    {
+        "pic":"./images/icons/tailwind.png",
+        "title":"Tailwind"
+    },
+    {
+        "pic":"./images/icons/mongoDB.png",
+        "title":"MongoDB"
+    },
+    {
+        "pic":"./images/icons/java.png",
+        "title":"Java"
+    },
+    {
+        "pic":"./images/icons/php.png",
+        "title":"Php"
+    },
+    {
+        "pic":"./images/icons/mySql (2).png",
+        "title":"MySQL"
+    },
+    {
+        "pic":"./images/icons/nodejs.png",
+        "title":"Node Js"
+    },
+    {
+        "pic":"./images/icons/gitHubBlack.png",
+        "title":"GitHub"
+    }
+]
