@@ -24,16 +24,16 @@
         </div>
 
         <ul class="nav__links">
-          <li class="nav__item">
+          <li class="nav__item nav__item--home">
             <a class="nav__link" href="#home">Home</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--about-me">
             <a class="nav__link" href="#about-me">About me</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--skills">
             <a class="nav__link" href="#skills">Skills</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--contact">
             <a class="nav__link" href="#contact">Contact me</a>
           </li>
         </ul>
@@ -71,22 +71,15 @@
 
            <div class="about-me__text-cv">
                 <p>
-                  I am a <span>software development technician</span>, graduated from the university
-                  Cesde, I chose this technique because my life has always beendirected by
-                  the world of technology and it was important study something that I was
-                  passionate about, an additional plus that I know will I can provide to those
-                  who purchase my services is that I am a person who loves challenges, I am very
-                  curious and I go more beyond what they ask of me, it has never been an obstacle 
-                  to work in team, on the contrary, I believe that big projects come out of the 
-                  union of great minds.
+                  I am a <span>software development technician</span>, graduated from the University Cesde at Medellin Colombia. Looking for my first
+work experience in this field, with 19 years work experience in positions such as Salesman and business administrator.
+                  
                   <p>
-                    I am a faithful believer that never
-                     It is late to fulfill dreams, that everyone's processes are
-                     different and that in the end the important thing is improvement.
+                    I am a faithful believer that  it is never to late to fulfill dreams, everyone processes  are different and at the ends the most important thing is to IMPROVE.
                   </p>
                 </p>
                 <div class="about-me__cv">
-                  <a class="abaout-me__download-cv effect"download="Alexander CV"id="hhh" href="cv.pdf">Download CV</a>
+                  <a class="abaout-me__download-cv effect"download="Alexander CV" href="cv.pdf">Download CV</a>
                 </div>
               </div>
         </div>
@@ -101,37 +94,31 @@
       <section class="contact" id="contact">
         <h2 class="title">Contact me</h2>
 
-        <form id="form" action="https://formsubmit.co/106d2bf5626f86106b58b8d7886f4f61" method="POST">
+        <form id="form" action="" method="POST">
               <div class="contact__form">
 
                 <div class="contact__formInputs">
                   <label class="contact__formLabel " for="message">Name</label>
-                  <input class="contact__formInput "  id="name" name="name" type="text" required>
+                  <input class="contact__formInput "  id="name" name="name" type="text" >
                   <p id="nameError" class="contact__formMessageError"></p>
                 </div>
                 
                 
                   <div class="contact__formInputs">
                     <label class="contact__formLabel" for="message">Email</label>
-                    <input class="contact__formInput" id="email" name="email" type="email"required>
+                    <input class="contact__formInput" id="email" name="email" type="email">
                     <p id="emailError" class="contact__formMessageError"></p>
                   </div>
                 
                 <div class="contact__formInputs">
                   <label class="contact__formLabel" for="message">Message</label>
-                  <textarea class="contact__formInput contact__formInput--textarea" id="message" name="message"required ></textarea>
+                  <textarea class="contact__formInput contact__formInput--textarea" id="message" name="message" ></textarea>
                   <p id="messageError" class="contact__formMessageError"></p>
                 </div>
                 
 
                 <input  type="submit" value="Enviar" class="contact__formSubmit effect">
                 
-
-                <!-- directs you to a url -->
-                <input type="hidden" name="_next" value="http:alexandergomezweb.netlify.app/">
-                <!-- Remove so you don't have to validate with capcha -->
-                <input type="hidden" name="_captcha" value="false">
-
               </div>
             </form>
             

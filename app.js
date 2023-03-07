@@ -38,6 +38,20 @@ function animateBars() {
     navLinks.classList.toggle('navLinks--visible');
 }
 
+document.querySelector('.nav__item--home').addEventListener('click', () => {
+    animateBars();     
+});
+document.querySelector('.nav__item--about-me').addEventListener('click', () => {
+    animateBars();
+});
+document.querySelector('.nav__item--skills').addEventListener('click', () => {
+    animateBars();
+});
+document.querySelector('.nav__item--contact').addEventListener('click', () => {
+    animateBars();
+});
+
+
 const skillsContainer = document.getElementById('skills__container');
 skills = new Array();
 
