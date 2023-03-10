@@ -101,13 +101,8 @@ form.addEventListener('submit',(e) => {
     
     return false;
 });
-namee.addEventListener('blur');
-email.addEventListener('blur');
-message.addEventListener('blur');
 
-const formValidation = (e) => {
-    
-}
+
 
 
 /*const form = document.querySelector('#form')
@@ -164,8 +159,5 @@ const sendEmail = () => {
     }).then(
         message => alert(message),
     );
-}
-const reset = () => {
-    
 }
 
