@@ -91,14 +91,23 @@ if (skillsContainer) {
 const namee = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
-const btnSend = document.getElementById('form');
+const form = document.getElementById('form');
 
-btnSend.addEventListener('submit',(e) => {
+form.addEventListener('submit',(e) => {
     e.preventDefault();
     sendEmail();
 
+    form.reset();
+    
+    return false;
 });
+namee.addEventListener('blur');
+email.addEventListener('blur');
+message.addEventListener('blur');
 
+const formValidation = (e) => {
+    
+}
 
 
 /*const form = document.querySelector('#form')
@@ -155,5 +164,8 @@ const sendEmail = () => {
     }).then(
         message => alert(message),
     );
+}
+const reset = () => {
+    
 }
 
