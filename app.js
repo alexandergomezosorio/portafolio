@@ -1,4 +1,3 @@
-
 const calcScrollValue = () => {
     const scrollProgress = document.querySelector('.progress');
     
@@ -23,6 +22,8 @@ const calcScrollValue = () => {
 
 window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
+
+
 
 document.querySelector('.bars__menu').addEventListener('click', animateBars);
 
@@ -86,6 +87,20 @@ if (skillsContainer) {
         createDiv.appendChild(createName);
     }
 }
+
+const namee = document.getElementById('name');
+const email = document.getElementById('email');
+const message = document.getElementById('message');
+const btnSend = document.getElementById('form');
+
+btnSend.addEventListener('submit',(e) => {
+    e.preventDefault();
+    sendEmail();
+
+});
+
+
+
 /*const form = document.querySelector('#form')
  addEventListener('submit', formValidation);
 
@@ -122,5 +137,23 @@ function formValidation(e) {
     }
 } */
 
+const sendEmail = () => {
+    const ebody = `
+            <b>name: </b>${namee.value}
+            <br>
+            <b>email: </b>${email.value}
+            <br>
+            <b>message: </b>${message.value}
+            <br>`
 
+    Email.send({
+        SecureToken: "d7e3c435-c3e5-4638-9126-cc84c40ceecb",
+        To: 'alexaruba18@gmail.com',
+        From: "alexandergomezweb@gmail.com",
+        Subject: "Email form " + email.value,
+        Body: ebody
+    }).then(
+        message => alert(message),
+    );
+}
 
