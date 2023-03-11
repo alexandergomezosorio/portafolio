@@ -1,6 +1,6 @@
 const calcScrollValue = () => {
     const scrollProgress = document.querySelector('.progress');
-    
+
     const pos = document.documentElement.scrollTop;
     const calcHeight =
         document.documentElement.scrollHeight -
@@ -40,7 +40,7 @@ function animateBars() {
 }
 
 document.querySelector('.nav__item--home').addEventListener('click', () => {
-    animateBars();     
+    animateBars();
 });
 document.querySelector('.nav__item--about-me').addEventListener('click', () => {
     animateBars();
@@ -93,53 +93,42 @@ const email = document.getElementById('email');
 const message = document.getElementById('message');
 const form = document.getElementById('form');
 
-form.addEventListener('submit',(e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    sendEmail();
-
-    form.reset();
+    formValidation();
     
-    return false;
 });
 
+ function formValidation(e) {
 
+    const expressions = {
 
-
-/*const form = document.querySelector('#form')
- addEventListener('submit', formValidation);
-
-
-function formValidation(e) {
-    
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const message = document.querySelector('#message').value;
+    }
 
     const nameError = document.querySelector('#nameError');
     const emailError = document.querySelector('#emailError');
-    const messageError = document.querySelector('#messageError'); 
-    
+    const messageError = document.querySelector('#messageError');
 
-    if (name === '') {
-        nameError.textContent = 'Name cannot be empty';
+
+    if (namee.value !== '' && email.value !== '' && message.value !== '') {
         
+        sendEmail();
+        form.reset();
+
+        return false;
+
     } else {
-        nameError.textContent = '';
-        
+        Swal.fire({
+            title: 'All fields are required',
+            icon: 'error',
+            color: 'red',
+            timer: 3000,
+            timerProgressBar: true,
+            showCancelButton: false
+            
+        });
     }
-    if (email === '') {
-        emailError.textContent = 'Email cannot be empty';
-        
-    } else {
-        emailError.textContent = '';
-    }
-    if (message === '') {
-        messageError.textContent = 'Message cannot be empty';
-        
-    } else {
-        messageError.textContent = '';
-    }
-} */
+} 
 
 const sendEmail = () => {
     const ebody = `
@@ -157,7 +146,14 @@ const sendEmail = () => {
         Subject: "Email form " + email.value,
         Body: ebody
     }).then(
-        message => alert(message),
+        Swal.fire({
+            title: 'Thank you for contacting us',
+            text: namee.value,
+            icon: 'success',
+            footer: 'your message has been received',
+            timer: 5000,
+            timerProgressBar: true,
+        })
     );
 }
 
