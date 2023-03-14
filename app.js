@@ -88,30 +88,85 @@ if (skillsContainer) {
     }
 }
 
-const namee = document.getElementById('name');
+const userName = document.getElementById('userName');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 const form = document.getElementById('form');
+const inputs = document.querySelectorAll('#form input');
+
+
+const expressions = {
+    userReq: /^[a-zA-ZÀ-ÿ\s]{3,40}$/,
+    emailReq: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    messageReq:  /^[a-zA-ZÀ-ÿ0-9\s]{10,40}$/
+}
+
+const testInputs = (e) => {
+
+    switch (e.target.name) {
+
+        case "userName":
+            if (!expressions.userReq.test(e.target.value)) {
+                document.getElementById('userName').classList.remove('contact__formInput--active');
+                document.getElementById('userName').classList.add('contact__formInput--error');
+                document.getElementById('nameError').classList.add('contact__formMessage--error');
+            } else {
+                document.getElementById('nameError').classList.remove('contact__formMessage--error');
+                document.getElementById('userName').classList.remove('contact__formInput--error');
+                document.getElementById('userName').classList.add('contact__formInput--active');
+                
+            }
+            break;
+
+        case "email":
+            if (!expressions.emailReq.test(e.target.value)) {
+                document.getElementById('email').classList.remove('contact__formInput--active');
+                document.getElementById('email').classList.add('contact__formInput--error');
+                document.getElementById('emailError').classList.add('contact__formMessage--error');
+            } else {
+                document.getElementById('emailError').classList.remove('contact__formMessage--error');
+                document.getElementById('email').classList.remove('contact__formInput--error');
+                document.getElementById('email').classList.add('contact__formInput--active');
+            }
+            break;
+        
+        case "message":
+            if (!expressions.messageReq.test(e.target.value)) {
+                document.getElementById('message').classList.remove('contact__formInput--active');
+                document.getElementById('message').classList.add('contact__formInput--error');
+                document.getElementById('messageError').classList.add('contact__formMessage--error');
+            } else {
+                document.getElementById('messageError').classList.remove('contact__formMessage--error');
+                document.getElementById('message').classList.remove('contact__formInput--error');
+                document.getElementById('message').classList.add('contact__formInput--active');
+            }
+            break;
+    }
+   
+}
+
+inputs.forEach((input) => {
+    input.addEventListener('keyup', testInputs);
+    input.addEventListener('blur', testInputs);
+
+});
+
+message.addEventListener('keyup', testInputs);
+message.addEventListener('blur', testInputs);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    formValidation();
+    formValidation()
+    document.getElementById('userName').classList.remove('contact__formInput--active');
+    document.getElementById('email').classList.remove('contact__formInput--active');
+    document.getElementById('message').classList.remove('contact__formInput--active');
     
 });
 
- function formValidation(e) {
 
-    const expressions = {
+const formValidation = () => {
+    if (userName.value !== '' && email.value !== '' && message.value !== '') {
 
-    }
-
-    const nameError = document.querySelector('#nameError');
-    const emailError = document.querySelector('#emailError');
-    const messageError = document.querySelector('#messageError');
-
-
-    if (namee.value !== '' && email.value !== '' && message.value !== '') {
-        
         sendEmail();
         form.reset();
 
@@ -122,17 +177,18 @@ form.addEventListener('submit', (e) => {
             title: 'All fields are required',
             icon: 'error',
             color: 'red',
+            width: '50%',
             timer: 3000,
             timerProgressBar: true,
             showCancelButton: false
-            
+
         });
     }
-} 
+}
 
 const sendEmail = () => {
     const ebody = `
-            <b>name: </b>${namee.value}
+            <b>name: </b>${userName.value}
             <br>
             <b>email: </b>${email.value}
             <br>
@@ -148,12 +204,15 @@ const sendEmail = () => {
     }).then(
         Swal.fire({
             title: 'Thank you for contacting us',
-            text: namee.value,
+            text: userName.value,
             icon: 'success',
+            width: '50%',
             footer: 'your message has been received',
             timer: 5000,
             timerProgressBar: true,
         })
     );
 }
+
+
 

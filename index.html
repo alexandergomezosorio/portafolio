@@ -99,21 +99,21 @@ work experience in this field, with 19 years work experience in positions such a
 
                 <div class="contact__formInputs">
                   <label class="contact__formLabel " for="message">Name</label>
-                  <input class="contact__formInput "  id="name" name="name" type="text" >
-                  <p id="nameError" class="contact__formMessageError"></p>
+                  <input class="contact__formInput "  id="userName" name="userName" type="text" >
+                  <p id="nameError" class="contact__formMessage">Name cannot be empty and does not accept numbers or characters</p>
                 </div>
                 
                 
                   <div class="contact__formInputs">
                     <label class="contact__formLabel" for="message">Email</label>
-                    <input class="contact__formInput" id="email" name="email" type="email">
-                    <p id="emailError" class="contact__formMessageError"></p>
+                    <input class="contact__formInput " id="email" name="email" type="email">
+                    <p id="emailError" class="contact__formMessage">Invalid email</p>
                   </div>
                 
                 <div class="contact__formInputs">
                   <label class="contact__formLabel" for="message">Message</label>
-                  <textarea class="contact__formInput contact__formInput--textarea" id="message" name="message" ></textarea>
-                  <p id="messageError" class="contact__formMessageError"></p>
+                  <textarea class="contact__formInput  contact__formInput--textarea" id="message" name="message" ></textarea>
+                  <p id="messageError" class="contact__formMessage">Message does not accept special characters and must have a minimum of 10 and a maximum of 200 characters. </p>
                 </div>
 
                 <input id="send" type="submit" value="Send" class="contact__formSubmit effect">
