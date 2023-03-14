@@ -177,7 +177,7 @@ const formValidation = () => {
             title: 'All fields are required',
             icon: 'error',
             color: 'red',
-            width: '50%',
+            width: '80%',
             timer: 3000,
             timerProgressBar: true,
             showCancelButton: false
@@ -206,7 +206,7 @@ const sendEmail = () => {
             title: 'Thank you for contacting us',
             text: userName.value,
             icon: 'success',
-            width: '50%',
+            width: '80%',
             footer: 'your message has been received',
             timer: 5000,
             timerProgressBar: true,
