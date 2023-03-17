@@ -759,6 +759,7 @@ body::-webkit-scrollbar-thumb:hover {
 
   .about-me__text-cv p span {
     font-size:larger;
+    font-weight: 900;
   }
 
   .abaout-me__download-cv {
